@@ -50,6 +50,9 @@ public:
     /// <returns>Возвращаем позицию substr. Если подстрока не найдена, то возвратить -1</returns>
     size_t Find(const TString& substr) const;
 
+    //вариант для строки
+    size_t Find(const char* substr) const;
+
 
     /// <summary> Функция замены букв </summary>
     /// <param name="oldSymbol">Символ, который требуется заменить </param>
@@ -114,15 +117,15 @@ public:
     friend std::ostream & operator<<(std::ostream &, const TString &);
 };
 
-/// <summary> Оператор +</summary>  
-/// <example> 
+/// <summary> Оператор +</summary>
+/// <example>
 /// <code>
 /// TString a = "Hello";
 /// TString b = "World";
 /// TString c = a + b; // c равна "HelloWorld"
 /// </code>
 /// </example>
-/// <returns>Возвращаем строку равную a + b</returns>  
+/// <returns>Возвращаем строку равную a + b</returns>
 TString operator+(const TString & a, const TString & b);
 
 
@@ -134,8 +137,8 @@ bool operator!=(const TString & a, const TString & b);
 bool operator>(const TString & a, const TString & b);
 
 
-/// <summary> Оператор вывода </summary>  
-/// <param name="out">Поток куда выводим строку </param>  
+/// <summary> Оператор вывода </summary>
+/// <param name="out">Поток куда выводим строку </param>
 /// <param name="str">Строка, которую выводим </param>
-/// <returns>Возвращаем ссылку на поток</returns> 
+/// <returns>Возвращаем ссылку на поток</returns>
 std::ostream & operator<<(std::ostream &out, const TString &str);

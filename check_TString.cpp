@@ -33,10 +33,10 @@ int main()
     assert(str2 == " tr tr tr123");
 
 
-    //size_t found = str2.Find("tr12");
-    //assert(found == 7);
-    //found = str2.Find("uuuuuu"); // not found, returns -1
-    //assert(found == -1);
+    size_t found = str2.Find("tr12");
+    assert(found == 7);
+    found = str2.Find("uuuuuu"); // not found, returns -1
+    assert(found == -1);
 
 
     str2.LTrim(' ');
